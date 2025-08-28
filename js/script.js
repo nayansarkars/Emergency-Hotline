@@ -15,14 +15,14 @@ let heartCount = 0;
 let coinCount = 100;
 let copyCount = 0;
 
-// DOM refs
+// Dom Apply 
 const heartCountEl = document.getElementById("heartCount");
 const coinCountEl = document.getElementById("coinCount");
 const copyCountEl = document.getElementById("copyCount");
 const historyList = document.getElementById("historyList");
 const cardContainer = document.getElementById("cardContainer");
 
-// Render service cards
+// Cards Section
 services.forEach(service => {
   const card = document.createElement("div");
   card.className = "bg-white shadow-md rounded-xl p-4 text-start relative hover:shadow-lg transition";
@@ -31,7 +31,7 @@ services.forEach(service => {
     <div class="w-10 h-10 bg-red-100 rounded-xl flex items-center justify-center mb-2">
       <img src="./assets/${service.icon}" class="w-5 h-5" />
     </div>
-    <button class="absolute top-2 right-2 text-gray-600 hover:text-red-500 text-xl heart-btn">♡</button>
+    <button class="absolute top-2 right-2 text-gray-600 hover:text-red-500 text-4xl heart-btn">♡</button>
     <h3 class="font-semibold text-base">${service.name}</h3>
     <p class="text-sm text-gray-500">${service.subtitle}</p>
     <p class="text-2xl font-bold mt-2">${service.number}</p>
@@ -50,7 +50,7 @@ services.forEach(service => {
   cardContainer.appendChild(card);
 });
 
-// Add heart functionality
+// Heart functionality
 document.querySelectorAll(".heart-btn").forEach(btn => {
   btn.addEventListener("click", () => {
     heartCount++;
