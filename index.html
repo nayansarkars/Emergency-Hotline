@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Emergency Hotline</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body class="bg-[#F5FFF6]">
+
+  <!-- Navbar -->
+  <nav class="flex justify-between items-center px-6 py-4 bg-white">
+    <div class="flex items-center gap-3">
+      <img src="./assets/logo.png" alt="logo" class="w-10">
+      <h1 class="text-xl font-bold text-[#006747]">Emergency Service</h1>
+    </div>
+    <div class="flex items-center gap-3">
+      <!-- Heart -->
+      <div class="flex items-center bg-[#41FF6B1A] px-5 py-1 rounded-full gap-1">
+        <span id="heartCount" class="text-black font-bold text-sm">0</span>
+        <img src="./assets/heart.png" alt="heart" class="w-4 h-4">
+      </div>
+
+      <!-- Coin -->
+      <div class="flex items-center bg-[#41FF6B1A] px-4 py-1 rounded-full gap-1">
+        <span id="coinCount" class="text-black font-bold text-sm">100</span>
+        <img src="./assets/coin.png" alt="coin" class="w-4 h-4">
+      </div>
+
+      <!-- Copy Count -->
+      <div class="flex items-center bg-[#00A63E] px-6 py-2 rounded-3xl gap-1">
+        <span id="copyCount" class="text-white font-bold text-sm">0</span>
+        <span class="text-white font-bold text-sm">Copy</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="text-center py-10 text-white 
+         [background:linear-gradient(90deg,rgba(1,49,35,1),rgba(0,103,71,1)_50%,rgba(1,50,35,1)_100%)]">
+    <img src="./assets/logo-dark.png" alt="logo" class="mx-auto w-16 h-16">
+    <h2 class="text-2xl font-bold mt-4">Emergency Service Directory</h2>
+    <p class="mt-2 text-sm max-w-3xl mx-auto">
+      Government Emergency Services at Your Fingertip – A Project by Government of the People’s Republic of Bangladesh
+    </p>
+  </section>
+
+  <!-- Content -->
+<section class="flex flex-col lg:flex-row gap-4 p-9 bg-[#F8FFF9]">
+
+    <!-- Cards -->
+    <div class="flex-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="cardContainer">
+            <!-- Cards will be injected dynamically by js -->
+    </div>
+
+    <!-- Call History -->
+    <div class="w-full lg:w-1/4 bg-white shadow-sm rounded-xl p-4 h-fit overflow-y-auto mt-6 lg:mt-0">
+
+      <div class="flex justify-between items-center mb-3">
+        <h3 class="font-semibold text-lg flex items-center gap-2"><i class="fa-solid fa-clock"></i> Call History</h3>
+        <button onclick="clearHistory()" class="bg-[#00A63E] text-white px-7 py-3 rounded-3xl text-lg">Clear</button>
+      </div>
+      <ul id="historyList" class="space-y-3 text-sm text-gray-700"></ul>
+    </div>
+  </section>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
