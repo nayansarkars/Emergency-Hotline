@@ -52,3 +52,6 @@ Both methods are used inside event handlers, but they solve different problems.
 * event.stopPropagation()
     - Purpose: Stops the event from bubbling (or capturing) to parent elements.
     - The event’s default action still happens unless preventDefault() is also used.
+
+
+    
